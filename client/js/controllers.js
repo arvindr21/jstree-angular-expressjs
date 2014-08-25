@@ -22,12 +22,11 @@ app.controller('BasicCtrl', ['$scope',
       }
     };
 
-
     $scope.typesConfig = {
       "default": {
-        "icon":  "/jstree/imgs/tree.png"        
+        "icon": "/jstree/imgs/tree.png"
       }
-    }
+    };
 
   }
 ]).controller('AjaxCtrl', ['$scope',
@@ -38,16 +37,13 @@ app.controller('BasicCtrl', ['$scope',
   function($scope) {
     /* List of all events  */
     /* http://www.jstree.com/api/#/?q=.jstree%20Event */
-    $scope.htmlConsole = '';
 
     $scope.readyCB = function() {
       console.log('readyCB');
-      $scope.htmlConsole = 'readyCB';
     };
 
     $scope.changedCB = function(e, data) {
       console.log('changedCB');
-      $scope.htmlConsole = 'changedCB';
       console.log('e : ', e);
       console.log('data : ', data);
 
