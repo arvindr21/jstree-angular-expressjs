@@ -46,11 +46,11 @@
          var evMap = a.treeEvents.split(';');
          for (var i = 0; i < evMap.length; i++) {
            if (evMap[i].length > 0) {
-             var e = evMap[i].split(':')[0] + '.jstree',
+             var evt = evMap[i].split(':')[0] + '.jstree',
                cb = evMap[i].split(':')[1];
-             treeDir.tree.on(e, s[cb]);
+             treeDir.tree.on(evt, s[cb]);
            }
-         };
+         }
        }
      },
      link: function(s, e, a) { // scope, element, attribute \O/
