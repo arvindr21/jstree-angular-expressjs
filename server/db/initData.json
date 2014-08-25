@@ -1,0 +1,36 @@
+[{
+  "id": "tree_id_1",
+  "text": "Root Node 1",
+  "icon": "http://jstree.com/tree.png",
+  "state": {
+    "opened": false,
+    "disabled": false,
+    "selected": true
+  },
+  "li_attr": {
+    "x-prop": true,
+    "y-prop": true
+  },
+  "a_attr": {
+    "a-prop": true,
+    "b-prop": true
+  },
+  "children": true
+}, {
+  "id": "tree_id_2",
+  "text": "Root Node 2",
+  "state": {
+    "opened": false,
+    "disabled": false,
+    "selected": false
+  },
+  "li_attr": {
+    "x-prop": false,
+    "y-prop": false
+  },
+  "a_attr": {
+    "a-prop": false,
+    "b-prop": false
+  },
+  "children": true
+}]

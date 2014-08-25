@@ -1,0 +1,38 @@
+<div ng-controller="PluginsCtrl">
+  <h3>Plugins</h3>
+
+  <h4>Checkbox</h4>
+  <js-tree tree-data="json" tree-src="../data/tree-json.json" tree-plugins="checkbox"></js-tree>
+
+  <h4>Contextmenu</h4>
+  <js-tree tree-data="json" tree-src="../data/tree-json.json" tree-plugins="contextmenu"></js-tree>
+
+  <h4>Custom Contextmenu</h4>
+  <js-tree tree-data="json" tree-src="../data/tree-json.json" tree-plugins="contextmenu" tree-contextmenu="/config/contextmenu.json"></js-tree>
+
+  <h4>Checkbox & Context menu</h4>
+  <js-tree tree-data="json" tree-src="../data/tree-json.json" tree-plugins="checkbox,contextmenu"></js-tree>
+
+  <h4>DND</h4>
+  <js-tree tree-data="json" tree-src="../data/tree-json.json" tree-plugins="dnd"></js-tree>
+
+  <h4>Sort</h4>
+  <js-tree tree-data="json" tree-src="../data/tree-json.json" tree-plugins="sort"></js-tree>
+
+  <h4>DND & Sort</h4>
+  <js-tree tree-data="json" tree-src="../data/tree-json.json" tree-plugins="sort,dnd"></js-tree>
+
+  <h4>Whole row</h4>
+  <js-tree tree-data="json" tree-src="../data/tree-json.json" tree-plugins="wholerow"></js-tree>
+
+  <h4>Unique</h4>
+  <js-tree tree-data="json" tree-src="../data/unique.json" tree-plugins="unique,dnd"></js-tree>
+
+  <h4>State</h4>
+  <js-tree tree-data="json" tree-src="../data/unique.json" tree-plugins="state" tree-state-key="stateTree"></js-tree>
+
+  <h4>Search</h4>
+  <js-tree tree-data="json" tree-src="../data/unique.json" tree-plugins="search" tree-search="searchTree"></js-tree>
+
+
+</div>
