@@ -1,0 +1,63 @@
+<div ng-controller="AjaxCtrl">
+    <h2>Loading <a href="http://www.jstree.com/" target="_blank">jsTree</a> via AJAX</h2> This example is powered by Expressjs
+    <hr/>
+    <h5>
+    Steps : 
+    <ol>
+      <li>Download
+        <a href="https://raw.githubusercontent.com/arvindr21/jsTree-Angular-Directive/master/jsTree.directive.js">
+          <code>jsTree.directive.js</code>
+        </a>
+        OR run
+        <code>bower install jstree-directive</code>
+      </li>
+      <li>Include the reference in your
+        <code>index.html</code>
+      </li>
+      <li>Add
+        <code>'jsTree.directive'</code>as a dependency to your app and you can use the below config to load your tree via AJAX</li>
+    </ol>
+  </h5>
+
+      <div>
+        <div class="col-50p">
+            <h4>Tree built with Expressjs - AJAX</h4>
+            <hr>Set
+            <code> tree-ajax="/tree"</code> where <code>/tree</code> is the server endpoint
+            <br/>
+            <br/>
+            <pre><code>&lt;js-tree  tree-ajax="/tree">&lt;/js-tree></code></pre>
+            <br/>Angular Directive Integration
+            <br/>
+            <pre><code>var app = angular.module('treeDemo', ['jsTree.directive'])</code></pre>
+        </div>
+        <div class="col-30p">
+        <h4>Demo</h4>
+            <hr>
+            <js-tree tree-ajax="/tree"></js-tree>
+        </div>
+    </div>
+    <hr/>
+
+       <div>
+        <div class="col-50p">
+            <h4>AJAX Loading & Plugins [checkbox, dnd]</h4>
+            <hr>Set
+            <code> tree-ajax="/tree"</code> and <code>tree-plugins="checkbox,dnd"</code>
+            <br/>
+            <br/>
+            <pre><code>&lt;js-tree  tree-ajax="/tree" tree-plugins="checkbox,dnd">&lt;/js-tree></code></pre>
+            <br/>Angular Directive Integration
+            <br/>
+            <pre><code>var app = angular.module('treeDemo', ['jsTree.directive'])</code></pre>
+        </div>
+        <div class="col-30p">
+        <h4>Demo</h4>
+            <hr>
+            <js-tree tree-ajax="/tree" tree-plugins="checkbox,dnd"></js-tree>
+        </div>
+    </div>
+    <hr/>
+
+
+</div>

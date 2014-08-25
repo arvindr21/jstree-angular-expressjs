@@ -1,0 +1,26 @@
+[{
+  "text": "Child Node 1",
+  "state": {
+    "opened": false,
+    "disabled": false,
+    "selected": true
+  },
+  "li_attr": {
+    "x-prop": false,
+    "y-prop": false
+  },
+  "a_attr": {
+    "a-prop": false,
+    "b-prop": false
+  },
+  "children": true
+}, {
+  "text": "Child Node 2",
+   "icon": "/jstree/imgs/tree.png",
+  "state": {
+    "opened": false,
+    "disabled": false,
+    "selected": false
+  },
+  "children": true
+}]

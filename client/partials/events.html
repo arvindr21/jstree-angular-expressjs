@@ -1,0 +1,82 @@
+<div ng-controller="EventsCtrl">
+    <h2>Binding events to <a href="http://www.jstree.com/" target="_blank">jsTree</a>
+    </h2>
+    <hr/>
+      <h5>
+    Steps : 
+    <ol>
+      <li>Download
+        <a href="https://raw.githubusercontent.com/arvindr21/jsTree-Angular-Directive/master/jsTree.directive.js">
+          <code>jsTree.directive.js</code>
+        </a>
+        OR run
+        <code>bower install jstree-directive</code>
+      </li>
+      <li>Include the reference in your
+        <code>index.html</code>
+      </li>
+      <li>Add
+        <code>'jsTree.directive'</code>as a dependency to your app and you can bind events to your tree</li>
+    </ol>
+  </h5>
+        You can find a complete list of events <a target="_blank" href="http://www.jstree.com/api/#/?q=.jstree%20Event">here</a>.
+    
+     <div>
+        <div class="col-50p">
+            <h4>Add Single Event to the Tree</h4>
+            <hr>Set
+            <code>tree-events="eventName:ScopeCallback"</code>
+            <br/>
+            <br/>
+            <pre><code>&lt;js-tree tree-data="json" tree-src="../jstree/data/tree-json.json" tree-events="ready:readyCB">&lt;/js-tree></code></pre>
+            <br/><b>The <code>callback functions</code> are defined in the controller scope</b>
+            <pre><code>$scope.readyCB = function() {
+      console.log('ready event call back');
+    };</code></pre>
+            <br/>Angular Directive Integration
+            <br/>
+            <pre><code>var app = angular.module('treeDemo', ['jsTree.directive'])</code></pre>
+        </div>
+        <div class="col-30p">
+            <h4>Demo</h4>
+            <hr>
+            <js-tree tree-data="json" tree-src="../jstree/data/tree-json.json" tree-events="ready:readyCB"></js-tree>
+        </div>
+    </div>
+        <em>PS : Open developer console to view the logs</em> 
+    <hr/>
+
+    <div>
+        <div class="col-50p">
+            <h4>Add Multiple Events to the Tree</h4>
+            <hr>Set
+            <code>tree-events="eventName:ScopeCallback;eventName:ScopeCallback"</code>
+            <br/>
+            <br/>
+            <pre><code>&lt;js-tree tree-data="json" tree-src="../jstree/data/tree-json.json" tree-events="ready:readyCB;changed:changedCB;open_node:openNodeCB">&lt;/js-tree></code></pre>
+            <br/><b>The <code>callback functions</code> are defined in the controller scope</b>
+            <pre><code>$scope.readyCB = function() {
+      console.log('ready event call back');
+    };
+$scope.changedCB = function(e, data) {
+      console.log('changed event call back');
+    };
+$scope.openNodeCB = function(e, data) {
+      console.log('open-node event call back');
+    };</code></pre>
+            <br/>Angular Directive Integration
+            <br/>
+            <pre><code>var app = angular.module('treeDemo', ['jsTree.directive'])</code></pre>
+        </div>
+        <div class="col-30p">
+            <h4>Demo</h4>
+            <hr>
+            <js-tree tree-data="json" tree-src="../jstree/data/tree-json.json" tree-events="ready:readyCB;changed:changedCB;open_node:openNodeCB"></js-tree>
+        </div>
+    </div>
+        <em>PS : Open developer console to view the logs</em>
+    <hr/>
+
+ 
+
+</div>

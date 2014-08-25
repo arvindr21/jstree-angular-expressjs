@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app="treeDemo">
+
+<head>
+    <meta charset="utf-8">
+    <title>jsTree Angular Directive</title>
+
+    <link rel="stylesheet" type="text/css" href="/jstree/themes/default/style.min.css">
+    <link rel="stylesheet" type="text/css" href="css/spaced-out.css">
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+
+    <script src="/js/libs/angular.min.js"></script>
+    <script src="/js/libs/angular-route.min.js"></script>
+
+    <script type="text/javascript" src="/js/libs/spaced-out.js"></script>
+
+    <script src="/js/libs/jquery.min.js"></script>
+    <script src="/jstree/jstree.min.js"></script>
+
+    <script src="/jstree/jsTree.directive.js"></script>
+
+    <script src="/js/app.js"></script>
+    <script src="/js/controllers.js"></script>
+</head>
+
+<body>
+
+    <div class="so-page-wrapper">
+        <aside class="so-page-menu">
+            <div class="so-menu-content">
+                <h1 class="">jsTree Angular Directive</h1>
+                <hr/>
+                <a href="/#basic" onclick="SpacedOutMenu.close(499);">Basic Setup</a>
+                <a href="/#plugins" onclick="SpacedOutMenu.close(599);">Plugins</a>
+                <a href="/#ajax" onclick="SpacedOutMenu.close(499);">AJAX Tree</a>
+                <a href="/#events" onclick="SpacedOutMenu.close(499);">Tree Events</a>
+            </div>
+        </aside>
+        <div class="so-content-overlay">
+        </div>
+        <div class="so-content">
+            <a href="javascript:" class="so-menu-toggle btn btn-active">Menu</a>
+            <p class="pull-right">By <a target="_blank" href="http://thejackalofjavascript.com">The Jackal of Javascript</a> </p>
+            <div ng-view></div>
+        </div>
+        <footer>
+            By Arvind Ravulavaru
+        </footer>
+    </div>
+
+
+
+    <script type="text/javascript">
+    SpacedOutMenu.install();
+    </script>
+
+
+</body>
+
+</html>
