@@ -1,7 +1,7 @@
 [{
   "id": "tree_id_1",
   "text": "Root Node 1",
-  "icon": "/imgs/tree.png",
+  "icon": "/jstree/imgs/tree.png",
   "state": {
     "opened": false,
     "disabled": false,

@@ -1,10 +1,48 @@
 <div ng-controller="AjaxCtrl">
+    <h2>Loading <a href="http://www.jstree.com/" target="_blank">jsTree</a> via AJAX</h2> This example is powered by Expressjs
+    <hr/>
+    <h3>Include <code>jsTree.directive.js</code> in your
+        <code>index.html</code>and add any of the below configurations to load a Static Tree</h3>
 
-  <h3>AJAX - JSON Data</h3>
-  <js-tree tree-ajax="/tree"></js-tree>
-  <hr/>
+      <div>
+        <div class="col-50p">
+            <h4>Tree built with Expressjs - AJAX</h4>
+            <hr>Set
+            <code> tree-ajax="/tree"</code>
+            <br/>
+            <br/>
+            <pre><code>&lt;js-tree  tree-ajax="/tree">&lt;/js-tree></code></pre>
+            <br/>Angular Directive Integration
+            <br/>
+            <pre><code>var app = angular.module('treeDemo', ['jsTree.directive'])</code></pre>
+        </div>
+        <div class="col-30p">
+        <h4>Demo</h4>
+            <hr>
+            <js-tree tree-ajax="/tree"></js-tree>
+        </div>
+    </div>
+    <hr/>
 
-  <h3>AJAX - JSON Data & Plugins [checkbox, contextmenu, dnd]</h3>
-  <js-tree tree-ajax="/tree" tree-plugins="checkbox,contextmenu,dnd"></js-tree>
+       <div>
+        <div class="col-50p">
+            <h4>AJAX - JSON Data & Plugins [checkbox, contextmenu, dnd]</h4>
+            <hr>Set
+            <code> tree-ajax="/tree"</code> and <code>tree-plugins="checkbox,contextmenu,dnd"</code>
+            <br/>
+            <br/>
+            <pre><code>&lt;js-tree  tree-ajax="/tree" tree-plugins="checkbox,contextmenu,dnd">&lt;/js-tree></code></pre>
+            <br/>Angular Directive Integration
+            <br/>
+            <pre><code>var app = angular.module('treeDemo', ['jsTree.directive'])</code></pre>
+        </div>
+        <div class="col-30p">
+        <h4>Demo</h4>
+            <hr>
+            <js-tree tree-ajax="/tree" tree-plugins="checkbox,contextmenu,dnd"></js-tree>
+        </div>
+    </div>
+    <hr/>
+
 
 </div>

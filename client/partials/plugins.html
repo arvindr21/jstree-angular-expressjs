@@ -1,40 +1,282 @@
 <div ng-controller="PluginsCtrl">
-  <h3>Plugins</h3>
+    <h2>Add <a href="http://www.jstree.com/" target="_blank">jsTree</a> plugins</h2>
+    <hr/>
+    <h3>Include
+        <code>jsTree.directive.js</code>in your
+        <code>index.html</code>and add any of the below configurations to load a Static Tree</h3>
 
-  <h4>Checkbox</h4>
-  <js-tree tree-data="json" tree-src="../data/tree-json.json" tree-plugins="checkbox"></js-tree>
+    <div>
+        <div class="col-50p">
+            <h4>Add Checkbox plugin</h4>
+            <hr>Set
+            <code>tree-plugins="checkbox"</code>
+            <br/>
+            <br/>
+            <pre><code>&lt;js-tree tree-plugins="checkbox" tree-data="json" tree-src="../jstree/data/tree-json.json">&lt;/js-tree></code></pre>
+            <br/>Angular Directive Integration
+            <br/>
+            <pre><code>var app = angular.module('treeDemo', ['jsTree.directive'])</code></pre>
+        </div>
+        <div class="col-30p">
+            <h4>Demo</h4>
+            <hr>
+            <js-tree tree-data="json" tree-src="../jstree/data/tree-json.json" tree-plugins="checkbox"></js-tree>
 
-  <div js-tree tree-data="json" tree-src="../data/tree-json.json" tree-plugins="checkbox"></div>
+        </div>
+    </div>
+    <hr/>
 
-  <h4>Contextmenu</h4>
-  <js-tree tree-data="json" tree-src="../data/tree-json.json" tree-plugins="contextmenu"></js-tree>
+    <div>
+        <div class="col-50p">
+            <h4>Add Contextmenu plugin</h4>
+            <hr>Set
+            <code>tree-plugins="contextmenu"</code>
+            <br/>
+            <br/>
+            <pre><code>&lt;js-tree tree-plugins="contextmenu" tree-data="json" tree-src="../jstree/data/tree-json.json">&lt;/js-tree></code></pre>
+            <br/>Angular Directive Integration
+            <br/>
+            <pre><code>var app = angular.module('treeDemo', ['jsTree.directive'])</code></pre>
+        </div>
+        <div class="col-30p">
+            <h4>Demo</h4>
+            <hr>
+            <js-tree tree-data="json" tree-src="../jstree/data/tree-json.json" tree-plugins="contextmenu"></js-tree>
 
-  <h4>Custom Contextmenu</h4>
-  <js-tree tree-data="json" tree-src="../data/tree-json.json" tree-plugins="contextmenu" tree-contextmenu="/config/contextmenu.json"></js-tree>
+        </div>
+    </div>
+    <hr/>
 
-  <h4>Checkbox & Context menu</h4>
-  <js-tree tree-data="json" tree-src="../data/tree-json.json" tree-plugins="checkbox,contextmenu"></js-tree>
+    <div>
+        <div class="col-50p">
+            <h4>Add Custom Contextmenu plugin</h4>
+            <hr>Set
+            <code>tree-plugins="contextmenu"</code>and pass the context menu object via
+            <code>tree-contextmenu="scopeObjName"</code>
+            <br/>
+            <br/>
+            <pre><code>&lt;js-tree tree-plugins="contextmenu" tree-contextmenu="contextMenu" tree-data="json" tree-src="../jstree/data/tree-json.json">&lt;/js-tree></code></pre>
+            <br/>Angular Directive Integration
+            <br/>
+            <pre><code>var app = angular.module('treeDemo', ['jsTree.directive'])</code></pre>
+            <br/>
+            <br/>Scope object
+            <pre><code>$scope.contextMenu = {
+      "Menu 1": {
+        "label": "Menu 1",
+        "action": function(obj) {
+          console.log(obj);
+          alert("You clicked " + obj.item.label);
+        }
+      },
+      "Menu 2": {
+        "label": "Menu 2",
+        "action": function(obj) {
+          console.log(obj);
+          alert("You clicked " + obj.item.label);
+        }
+      }
+    };</code></pre>
+        </div>
+        <div class="col-30p">
+            <h4>Demo</h4>
+            <hr>
+            <js-tree tree-data="json" tree-src="../jstree/data/tree-json.json" tree-plugins="contextmenu" tree-contextmenu="contextMenu"></js-tree>
+        </div>
+    </div>
+    <hr/>
 
-  <h4>DND</h4>
-  <js-tree tree-data="json" tree-src="../data/tree-json.json" tree-plugins="dnd"></js-tree>
+    <div>
+        <div class="col-50p">
+            <h4>Add Checkbox & Context menu plugins</h4>
+            <hr>Set
+            <code>tree-plugins="checkbox,contextmenu"</code>
+            <br/>
+            <br/>
+            <pre><code>&lt;js-tree tree-plugins="checkbox,contextmenu" tree-contextmenu="/config/contextmenu.json" tree-data="json" tree-src="../jstree/data/tree-json.json">&lt;/js-tree></code></pre>
+            <br/>Angular Directive Integration
+            <br/>
+            <pre><code>var app = angular.module('treeDemo', ['jsTree.directive'])</code></pre>
+        </div>
+        <div class="col-30p">
+            <h4>Demo</h4>
+            <hr>
+            <js-tree tree-data="json" tree-src="../jstree/data/tree-json.json" tree-plugins="checkbox,contextmenu"></js-tree>
+        </div>
+    </div>
+    <hr/>
 
-  <h4>Sort</h4>
-  <js-tree tree-data="json" tree-src="../data/tree-json.json" tree-plugins="sort"></js-tree>
+    <div>
+        <div class="col-50p">
+            <h4>Add Types plugin</h4>
+            <hr>Set
+            <code>tree-plugins="types"</code>and pass the config object via
+            <code>tree-types="typesConfig"</code>
+            <br/>
+            <br/>
+            <pre><code>&lt;js-tree tree-plugins="types" tree-types="typesConfig" tree-data="json" tree-src="../jstree/data/tree-json.json">&lt;/js-tree></code></pre>
+            <br/>Angular Directive Integration
+            <br/>
+            <pre><code>var app = angular.module('treeDemo', ['jsTree.directive'])</code></pre>
+            <br/>
+            <br/>Scope object
+            <pre><code>$scope.typesConfig = {
+      "default": {
+        "icon": "glyphicon glyphicon-flash"
+      },
+      "demo": {
+        "icon": "glyphicon glyphicon-ok"
+      }
+    }</code></pre>
+        </div>
+        <div class="col-30p">
+            <h4>Demo</h4>
+            <hr>
+            <js-tree tree-data="json" tree-src="../jstree/data/tree-json.json" tree-plugins="types" tree-types="typesConfig"></js-tree>
+        </div>
+    </div>
+    <hr/>
 
-  <h4>DND & Sort</h4>
-  <js-tree tree-data="json" tree-src="../data/tree-json.json" tree-plugins="sort,dnd"></js-tree>
+    <div>
+        <div class="col-50p">
+            <h4>Add DND plugins</h4>
+            <hr>Set
+            <code>tree-plugins="dnd"</code>
+            <br/>
+            <br/>
+            <pre><code>&lt;js-tree tree-plugins="dnd" tree-data="json" tree-src="../jstree/data/tree-json.json">&lt;/js-tree></code></pre>
+            <br/>Angular Directive Integration
+            <br/>
+            <pre><code>var app = angular.module('treeDemo', ['jsTree.directive'])</code></pre>
+        </div>
+        <div class="col-30p">
+            <h4>Demo</h4>
+            <hr>
+            <js-tree tree-data="json" tree-src="../jstree/data/tree-json.json" tree-plugins="dnd"></js-tree>
+        </div>
+    </div>
+    <hr/>
 
-  <h4>Whole row</h4>
-  <js-tree tree-data="json" tree-src="../data/tree-json.json" tree-plugins="wholerow"></js-tree>
+    <div>
+        <div class="col-50p">
+            <h4>Add Sort plugins</h4>
+            <hr>Set
+            <code>tree-plugins="sort"</code>
+            <br/>
+            <br/>
+            <pre><code>&lt;js-tree tree-plugins="sort" tree-data="json" tree-src="../jstree/data/tree-json.json">&lt;/js-tree></code></pre>
+            <br/>Angular Directive Integration
+            <br/>
+            <pre><code>var app = angular.module('treeDemo', ['jsTree.directive'])</code></pre>
+        </div>
+        <div class="col-30p">
+            <h4>Demo</h4>
+            <hr>
+            <js-tree tree-data="json" tree-src="../jstree/data/tree-json.json" tree-plugins="sort"></js-tree>
+        </div>
+    </div>
+    <hr/>
 
-  <h4>Unique</h4>
-  <js-tree tree-data="json" tree-src="../data/unique.json" tree-plugins="unique,dnd"></js-tree>
+    <div>
+        <div class="col-50p">
+            <h4>Add DND & Sort plugins</h4>
+            <hr>Set
+            <code>tree-plugins="dnd,sort"</code>
+            <br/>
+            <br/>
+            <pre><code>&lt;js-tree tree-plugins="dnd,sort" tree-data="json" tree-src="../jstree/data/tree-json.json">&lt;/js-tree></code></pre>
+            <br/>Angular Directive Integration
+            <br/>
+            <pre><code>var app = angular.module('treeDemo', ['jsTree.directive'])</code></pre>
+        </div>
+        <div class="col-30p">
+            <h4>Demo</h4>
+            <hr>
+            <js-tree tree-data="json" tree-src="../jstree/data/unique.json" tree-plugins="sort,dnd"></js-tree>
+        </div>
+    </div>
+    <hr/>
 
-  <h4>State</h4>
-  <js-tree tree-data="json" tree-src="../data/unique.json" tree-plugins="state" tree-state-key="stateTree"></js-tree>
+    <div>
+        <div class="col-50p">
+            <h4>Add Whole row plugin</h4>
+            <hr>Set
+            <code>tree-plugins="wholerow"</code>
+            <br/>
+            <br/>
+            <pre><code>&lt;js-tree tree-plugins="wholerow" tree-data="json" tree-src="../jstree/data/tree-json.json">&lt;/js-tree></code></pre>
+            <br/>Angular Directive Integration
+            <br/>
+            <pre><code>var app = angular.module('treeDemo', ['jsTree.directive'])</code></pre>
+        </div>
+        <div class="col-30p">
+            <h4>Demo</h4>
+            <hr>
+            <js-tree tree-data="json" tree-src="../jstree/data/tree-json.json" tree-plugins="wholerow"></js-tree>
+        </div>
+    </div>
+    <hr/>
 
-  <h4>Search</h4>
-  <js-tree tree-data="json" tree-src="../data/unique.json" tree-plugins="search" tree-search="searchTree"></js-tree>
+    <div>
+        <div class="col-50p">
+            <h4>Add Unique & DND plugin</h4>
+            <hr>Set
+            <code>tree-plugins="unique,dnd"</code>
+            <br/>
+            <br/>
+            <pre><code>&lt;js-tree tree-plugins="unique,dnd" tree-data="json" tree-src="../jstree/data/tree-json.json">&lt;/js-tree></code></pre>
+            <br/>Angular Directive Integration
+            <br/>
+            <pre><code>var app = angular.module('treeDemo', ['jsTree.directive'])</code></pre>
+        </div>
+        <div class="col-30p">
+            <h4>Demo</h4>
+            <hr>
+            <js-tree tree-data="json" tree-src="../jstree/data/unique.json" tree-plugins="unique,dnd"></js-tree>
+        </div>
+    </div>
+    <hr/>
 
 
+    <div>
+        <div class="col-50p">
+            <h4>Add State plugin</h4>
+            <hr>Set
+            <code>tree-plugins="state"</code>and
+            <code>tree-state-key="stateTree"</code>
+            <br/>
+            <br/>
+            <pre><code>&lt;js-tree tree-plugins="state" tree-state-key="stateTree" tree-data="json" tree-src="../jstree/data/tree-json.json">&lt;/js-tree></code></pre>
+            <br/>Angular Directive Integration
+            <br/>
+            <pre><code>var app = angular.module('treeDemo', ['jsTree.directive'])</code></pre>
+        </div>
+        <div class="col-30p">
+            <h4>Demo</h4>
+            <hr>
+            <js-tree tree-data="json" tree-src="../jstree/data/unique.json" tree-state-key="stateTree" tree-plugins="state"></js-tree>
+        </div>
+    </div>
+    <hr/>
+
+
+    <div>
+        <div class="col-50p">
+            <h4>Add Search plugin</h4>
+            <hr>Set
+            <code>tree-plugins="search"</code>
+            <br/>
+            <br/>
+            <pre><code>&lt;js-tree tree-plugins="search" tree-data="json" tree-src="../jstree/data/tree-json.json">&lt;/js-tree></code></pre>
+            <br/>Angular Directive Integration
+            <br/>
+            <pre><code>var app = angular.module('treeDemo', ['jsTree.directive'])</code></pre>
+        </div>
+        <div class="col-30p">
+            <h4>Demo</h4>
+            <hr>
+            <js-tree tree-data="json" tree-src="../jstree/data/tree-json.json" tree-plugins="search"></js-tree>
+        </div>
+    </div>
+    <hr/>
 </div>

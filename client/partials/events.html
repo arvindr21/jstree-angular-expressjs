@@ -1,7 +1,33 @@
-<div ng-controller="AjaxCtrl">
+<div ng-controller="EventsCtrl">
+    <h2>Binding events to <a href="http://www.jstree.com/" target="_blank">jsTree</a>
+    </h2>
+    <hr/>
+    <h3>Include
+        <code>jsTree.directive.js</code>in your
+        <code>index.html</code>and add any of the below configurations to load a Static Tree</h3>
 
-  <h3>JSON Data</h3>
-  <js-tree tree-data="json" tree-src="../data/tree-json.json" tree-events="ready:readyCB;changed:changedCB;open_node:openNodeCB"></js-tree>
-  <hr/>
+    
+    <div>
+        <div class="col-50p">
+            <h4>Add Evennts to the Tree</h4>
+            <hr>Set
+            <code>tree-plugins="checkbox"</code>
+            <br/>
+            <br/>
+            <pre><code>&lt;js-tree tree-data="json" tree-src="../jstree/data/tree-json.json" tree-events="ready:readyCB;changed:changedCB;open_node:openNodeCB">&lt;/js-tree></code></pre>
+            <br/><b>The <code>callback functions</code> are defined in the controller scope</b>
+            <br/>
+            <br/>Angular Directive Integration
+            <br/>
+            <pre><code>var app = angular.module('treeDemo', ['jsTree.directive'])</code></pre>
+        </div>
+        <div class="col-30p">
+            <h4>Demo</h4>
+            <hr>
+            <js-tree tree-data="json" tree-src="../jstree/data/tree-json.json" tree-events="ready:readyCB;changed:changedCB;open_node:openNodeCB"></js-tree>
+        </div>
+    </div>
+    <hr/>
+ 	<em>PS : Open console to view the logs</em>
 
 </div>

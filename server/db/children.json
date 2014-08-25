@@ -16,7 +16,7 @@
   "children": true
 }, {
   "text": "Child Node 2",
-   "icon": "/imgs/tree.png",
+   "icon": "/jstree/imgs/tree.png",
   "state": {
     "opened": false,
     "disabled": false,

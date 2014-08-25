@@ -52,7 +52,7 @@ var SpacedOutMenu = (function() {
 
     openBtn.addEventListener('click', show);
     openBtn.addEventListener('touchstart', show);
-    show();
+    //show();
   }
 
   function uninstall() {
@@ -67,10 +67,10 @@ var SpacedOutMenu = (function() {
     document.removeEventListener('keyup', onDocumentKeyUp);
   }
 
-  function delayClose(){
+  function delayClose(to){
     setTimeout(function(){
       close();
-    }, 799);
+    }, to || 799);
   }
 
   return {
