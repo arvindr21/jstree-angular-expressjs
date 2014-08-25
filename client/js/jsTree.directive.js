@@ -25,7 +25,6 @@
            e.after('<input type="text" placeholder="Search Tree" class="ng-tree-search"/>')
              .next()
              .on('keyup', function(ev) {
-               //s.searchTree(tree, ev.target.value, ev);
                if (to) {
                  clearTimeout(to);
                }
@@ -42,7 +41,18 @@
        }
        return config;
      },
-
+     manageEvents: function(s, e, a) {
+       if (a.treeEvents) {
+         var evMap = a.treeEvents.split(';');
+         for (var i = 0; i < evMap.length; i++) {
+           if (evMap[i].length > 0) {
+             var e = evMap[i].split(':')[0] + '.jstree',
+               cb = evMap[i].split(':')[1];
+             treeDir.tree.on(e, s[cb]);
+           }
+         };
+       }
+     },
      link: function(s, e, a) { // scope, element, attribute \O/
        $(function() {
          var config = {};
@@ -53,8 +63,7 @@
          if (a.treeData == 'html') {
            treeDir.fetchResource(a.treeSrc, function(data) {
              e.html(data);
-             treeDir.managePlugins(s, e, a, config);
-             treeDir.init(e, config);
+             treeDir.init(s, e, a, config);
            });
          } else if (a.treeData == 'json') {
            treeDir.fetchResource(a.treeSrc, function(data) {
@@ -63,8 +72,7 @@
                  'data': data
                }
              };
-             treeDir.managePlugins(s, e, a, config);
-             treeDir.init(e, config);
+             treeDir.init(s, e, a, config);
            });
          } else if (a.treeAjax) {
            config = {
@@ -79,15 +87,15 @@
                }
              }
            };
-           treeDir.managePlugins(s, e, a, config);
-           treeDir.init(e, config);
+           treeDir.init(s, e, a, config);
          }
        });
 
      },
-
-     init: function(e, config) {
+     init: function(s, e, a, config) {
+       treeDir.managePlugins(s, e, a, config);
        this.tree = $(e).jstree(config);
+       treeDir.manageEvents(s, e, a);
      }
    };
 

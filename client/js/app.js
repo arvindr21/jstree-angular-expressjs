@@ -14,6 +14,10 @@ config(['$routeProvider',
       templateUrl: '../partials/ajax.html',
       controller: 'AjaxCtrl'
     }).
+    when('/events', {
+      templateUrl: '../partials/events.html',
+      controller: 'EventsCtrl'
+    }).
     otherwise({
       redirectTo: '/basic'
     });
