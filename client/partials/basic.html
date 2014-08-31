@@ -1,4 +1,5 @@
 <div ng-controller="BasicCtrl">
+<<<<<<< HEAD
   <h2>Getting Started with <a href="http://www.jstree.com/" target="_blank">jsTree</a>  <a href="http://www.angularjs.org" target="_blank">Angularjs</a> Directive</h2>
   <hr/>
   <h5>
@@ -32,6 +33,23 @@
       <pre><code>&lt;js-tree tree-data="html" tree-src="../jstree/data/tree-html.html">&lt;/js-tree></code></pre>
       <br/>Static HTML format
       <pre><code>&lt;ul>
+=======
+    <h2>Getting Started with <a href="http://www.jstree.com/" target="_blank">jsTree</a>  <a href="http://www.angularjs.org" target="_blank">Angularjs</a> Directive</h2>
+    <hr/>
+    <h3>Include <a href="https://raw.githubusercontent.com/arvindr21/jsTree-Angular-Directive/master/jsTree.directive.js"><code>jsTree.directive.js</code></a> in your
+        <code>index.html</code>and add any of the below configurations to load a Static Tree</h3>
+    <div>
+        <div class="col-50p">
+            <h4>Load Static Tree - HTML input</h4>
+            <hr>Set
+            <code>tree-data="html"</code>and
+            <code>tree-src="/path/to/html"</code>
+            <br/>
+            <br/>
+            <pre><code>&lt;js-tree tree-data="html" tree-src="../jstree/data/tree-html.html">&lt;/js-tree></code></pre>
+            <br/>Static HTML format
+            <pre><code>&lt;ul>
+>>>>>>> 868b4299a5d75e145c0dcbe77004e2dcc85f0ef8
   &lt;li>Root node 1
     &lt;ul>
       &lt;li id="child_node_1">Child node 1&lt;/li>
@@ -47,6 +65,7 @@
   &lt;/li>
   &lt;li>Root node 2&lt;/li>
 &lt;/ul></code></pre>
+<<<<<<< HEAD
       <br/>Angular Directive Integration
       <br/>
       <pre><code>var app = angular.module('treeDemo', ['jsTree.directive'])</code></pre>
@@ -69,6 +88,30 @@
       <pre><code>&lt;js-tree tree-data="json" tree-src="../jstree/data/tree-json.json">&lt;/js-tree></code></pre>
       <br/>Static JSON format
       <pre><code>[{
+=======
+            <br/>Angular Directive Integration
+            <br/>
+            <pre><code>var app = angular.module('treeDemo', ['jsTree.directive'])</code></pre>
+        </div>
+        <div class="col-30p">
+            <h4>Demo</h4>
+            <hr>
+            <js-tree tree-data="html" tree-src="../jstree/data/tree-html.html"></js-tree>
+        </div>
+    </div>
+    <hr/>
+    <div>
+        <div class="col-50p">
+            <h4>Load Static Tree - JSON input</h4>
+            <hr>Set
+            <code>tree-data="json"</code>and
+            <code>tree-src="/path/to/json"</code>
+            <br/>
+            <br/>
+            <pre><code>&lt;js-tree tree-data="json" tree-src="../jstree/data/tree-json.json">&lt;/js-tree></code></pre>
+            <br/>Static JSON format
+            <pre><code>[{
+>>>>>>> 868b4299a5d75e145c0dcbe77004e2dcc85f0ef8
   "id": "ajson1",
   "parent": "#",
   "text": "Simple root node"
@@ -86,6 +129,7 @@
   "text": "Child 2"
 }]
 </code></pre>
+<<<<<<< HEAD
       <br/>Angular Directive Integration
       <br/>
       <pre><code>var app = angular.module('treeDemo', ['jsTree.directive'])</code></pre>
@@ -139,4 +183,18 @@
 
   </div>
 
+=======
+            <br/>Angular Directive Integration
+            <br/>
+            <pre><code>var app = angular.module('treeDemo', ['jsTree.directive'])</code></pre>
+        </div>
+        <div class="col-30p">
+            <h4>Demo</h4>
+            <hr>
+            <js-tree tree-data="json" tree-src="../jstree/data/tree-json.json"></js-tree>
+        </div>
+
+    </div>
+
+>>>>>>> 868b4299a5d75e145c0dcbe77004e2dcc85f0ef8
 </div>
