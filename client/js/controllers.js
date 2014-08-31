@@ -1,6 +1,5 @@
 app.controller('BasicCtrl', ['$scope',
   function($scope) {
-<<<<<<< HEAD
     $scope.treeModel = [{
       "id": "ajson1",
       "parent": "#",
@@ -18,9 +17,6 @@ app.controller('BasicCtrl', ['$scope',
       "parent": "ajson2",
       "text": "Child 2"
     }];
-=======
-
->>>>>>> 868b4299a5d75e145c0dcbe77004e2dcc85f0ef8
   }
 ]).controller('PluginsCtrl', ['$scope',
   function($scope) {
