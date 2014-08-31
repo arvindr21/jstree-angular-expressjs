@@ -98,4 +98,45 @@
 
   </div>
 
+
+ <div>
+    <div class="col-50p">
+      <h4>Load Static Tree - From model in scope</h4>
+      <hr>Set
+      <code>tree-data="scope"</code>and
+      <code>tree-model="treeModel"</code>
+      <br/>
+      <br/>
+      <pre><code>&lt;js-tree tree-data="json" tree-model="treeModel">&lt;/js-tree></code></pre>
+      <br/>JSON format in Model
+      <pre><code>[{
+  "id": "ajson1",
+  "parent": "#",
+  "text": "Simple root node"
+}, {
+  "id": "ajson2",
+  "parent": "#",
+  "text": "Root node 2"
+}, {
+  "id": "ajson3",
+  "parent": "ajson2",
+  "text": "Child 1"
+}, {
+  "id": "ajson4",
+  "parent": "ajson2",
+  "text": "Child 2"
+}]
+</code></pre>
+      <br/>Angular Directive Integration
+      <br/>
+      <pre><code>var app = angular.module('treeDemo', ['jsTree.directive'])</code></pre>
+    </div>
+    <div class="col-30p">
+      <h4>Demo</h4>
+      <hr>
+      <js-tree tree-data="scope" tree-model="treeModel"></js-tree>
+    </div>
+
+  </div>
+
 </div>
