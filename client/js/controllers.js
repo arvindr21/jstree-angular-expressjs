@@ -1,5 +1,5 @@
-app.controller('BasicCtrl', ['$scope',
-  function($scope) {
+app.controller('BasicCtrl', ['$scope', '$timeout',
+  function($scope, $timeout) {
     $scope.treeModel = [{
       "id": "ajson1",
       "parent": "#",
@@ -17,6 +17,7 @@ app.controller('BasicCtrl', ['$scope',
       "parent": "ajson2",
       "text": "Child 2"
     }];
+
   }
 ]).controller('PluginsCtrl', ['$scope',
   function($scope) {
