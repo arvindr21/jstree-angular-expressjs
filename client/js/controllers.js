@@ -1,5 +1,5 @@
 app.controller('BasicCtrl', ['$scope', '$timeout',
-  function($scope, $timeout) {
+  function ($scope, $timeout) {
     $scope.treeModel = [{
       "id": "ajson1",
       "parent": "#",
@@ -20,21 +20,24 @@ app.controller('BasicCtrl', ['$scope', '$timeout',
 
   }
 ]).controller('PluginsCtrl', ['$scope',
-  function($scope) {
+  function ($scope) {
 
     $scope.contextMenu = {
-      "Menu 1": {
-        "label": "Menu 1",
-        "action": function(obj) {
-          console.log(obj);
-          alert("You clicked " + obj.item.label);
-        }
-      },
-      "Menu 2": {
-        "label": "Menu 2",
-        "action": function(obj) {
-          console.log(obj);
-          alert("You clicked " + obj.item.label);
+      show_at_node: false,
+      items: {
+        "Menu 1": {
+          "label": "Menu 1",
+          "action": function (obj) {
+            console.log(obj);
+            alert("You clicked " + obj.item.label);
+          }
+        },
+        "Menu 2": {
+          "label": "Menu 2",
+          "action": function (obj) {
+            console.log(obj);
+            alert("You clicked " + obj.item.label);
+          }
         }
       }
     };
@@ -47,19 +50,19 @@ app.controller('BasicCtrl', ['$scope', '$timeout',
 
   }
 ]).controller('AjaxCtrl', ['$scope',
-  function($scope) {
+  function ($scope) {
 
   }
 ]).controller('EventsCtrl', ['$scope',
-  function($scope) {
+  function ($scope) {
     /* List of all events  */
     /* http://www.jstree.com/api/#/?q=.jstree%20Event */
 
-    $scope.readyCB = function() {
+    $scope.readyCB = function () {
       console.log('readyCB');
     };
 
-    $scope.changedCB = function(e, data) {
+    $scope.changedCB = function (e, data) {
       console.log('changedCB');
       console.log('e : ', e);
       console.log('data : ', data);
@@ -73,7 +76,7 @@ app.controller('BasicCtrl', ['$scope', '$timeout',
 
     };
 
-    $scope.openNodeCB = function(e, data) {
+    $scope.openNodeCB = function (e, data) {
       console.log('openNodeCB');
       console.log('e : ', e);
       console.log('data : ', data);

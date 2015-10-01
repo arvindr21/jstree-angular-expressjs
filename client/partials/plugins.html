@@ -2,7 +2,7 @@
     <h2>Add <a href="http://www.jstree.com/" target="_blank">jsTree</a> plugins</h2>
     <hr/>
     <h5>
-    Steps : 
+    Steps :
     <ol>
       <li>Download
         <a href="https://raw.githubusercontent.com/arvindr21/jsTree-Angular-Directive/master/jsTree.directive.js">
@@ -67,7 +67,6 @@
             <code>tree-plugins="contextmenu"</code>and pass the context menu object via
             <code>tree-contextmenu="scopeObjName"</code>
             <br/>
-            <br/>
             <pre><code>&lt;js-tree tree-plugins="contextmenu" tree-contextmenu="contextMenu" tree-data="json" tree-src="../jstree/data/tree-json.json">&lt;/js-tree></code></pre>
             <br/>Angular Directive Integration
             <br/>
@@ -75,21 +74,26 @@
             <br/>
             <br/>Scope object
             <pre><code>$scope.contextMenu = {
-      "Menu 1": {
-        "label": "Menu 1",
-        "action": function(obj) {
-          console.log(obj);
-          alert("You clicked " + obj.item.label);
-        }
-      },
-      "Menu 2": {
-        "label": "Menu 2",
-        "action": function(obj) {
-          console.log(obj);
-          alert("You clicked " + obj.item.label);
-        }
+  show_at_node: false,
+  items: {
+    "Menu 1": {
+      "label": "Menu 1",
+      "action": function(obj) {
+        console.log(obj);
+        alert("You clicked " + obj.item.label);
       }
-    };</code></pre>
+    },
+    "Menu 2": {
+      "label": "Menu 2",
+      "action": function(obj) {
+        console.log(obj);
+        alert("You clicked " + obj.item.label);
+      }
+    }
+  }
+};</code></pre>
+            <br/>
+            <em>PS : As mentioned in the jsTree documentation, items is "an object of actions, or a function that accepts a node and a callback function and calls the callback function with an object of actions available for that node (you can also return the items too)."</em>
         </div>
         <div class="col-30p">
             <h4>Demo</h4>
